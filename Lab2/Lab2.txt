@@ -1,0 +1,27 @@
+1.
+Rupeshs-MacBook-Air:myvagrant Rupesh$ vagrant up
+
+2. 
+http://localhost:8001/
+
+3. 
+Upload python file. Open it, it will be green once opened.
+
+4. On local m/c for spark, open below url to know the list of spark jobs running. Under Jobs tab
+
+http://localhost:4040/jobs/
+
+
+This iPython notebook contains list of steps:
+http://localhost:8001/notebooks/spark_tutorial_student.ipynb
+
+At a high level, every Spark application consists of a driver program that launches various parallel operations on executor 
+Java Virtual Machines (JVMs) running either in a cluster or locally on the same machine. 
+In Databricks Cloud, "Databricks Shell" is the driver program. When running locally, "PySparkShell" is the driver program. 
+In all cases, this driver program contains the main loop for the program and creates distributed datasets on the cluster, then applies operations (transformations & actions) to those datasets.
+Driver programs access Spark through a SparkContext object, which represents a connection to a computing cluster. 
+A Spark context object (sc) is the main entry point for Spark functionality. 
+A Spark context can be used to create Resilient Distributed Datasets (RDDs) on a cluster.
+Try printing out sc to see its type.
+
+5. 

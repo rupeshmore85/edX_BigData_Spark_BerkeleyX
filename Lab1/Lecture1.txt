@@ -1,0 +1,51 @@
+Commands:
+
+1. Installed VirtualBox
+2. Installed Vagrant
+
+https://courses.edx.org/courses/BerkeleyX/CS100.1x/1T2015/courseware/d1f293d0cb53466dbb5c0cd81f55b45b/920d3370060540c8b21d56f05c64bdda/
+
+3. Open Terminal:
+
+$ cd ~
+$ mkdir myvagrant
+$ cd myvagrant/
+$ pwd
+/Users/Rupesh/myvagrant
+$ cp ../Downloads/mooc-setup-master.zip .
+Rupeshs-MacBook-Air:myvagrant Rupesh$ ls -la
+total 48
+drwxr-xr-x   3 Rupesh  staff    102 Jun  7 23:37 .
+drwxr-xr-x+ 97 Rupesh  staff   3298 Jun  7 23:34 ..
+-rw-r-----@  1 Rupesh  staff  23618 Jun  7 23:37 mooc-setup-master.zip
+Rupeshs-MacBook-Air:myvagrant Rupesh$ 
+Rupeshs-MacBook-Air:myvagrant Rupesh$ unzip mooc-setup-master.zip 
+Archive:  mooc-setup-master.zip
+b1abc030344deaf72e409eb936a7bf643fb72ac2
+   creating: mooc-setup-master/
+  inflating: mooc-setup-master/README.md  
+  inflating: mooc-setup-master/Vagrantfile  
+  inflating: mooc-setup-master/lab0_student.ipynb  
+  inflating: mooc-setup-master/lab1_word_count_student.ipynb  
+  inflating: mooc-setup-master/spark_tutorial_student.ipynb  
+Rupeshs-MacBook-Air:myvagrant Rupesh$ 
+Rupeshs-MacBook-Air:myvagrant Rupesh$ mv mooc-setup-master/Vagrantfile .
+Rupeshs-MacBook-Air:myvagrant Rupesh$ ls -la
+total 56
+drwxr-xr-x   5 Rupesh  staff    170 Jun  7 23:38 .
+drwxr-xr-x+ 97 Rupesh  staff   3298 Jun  7 23:34 ..
+-rw-r--r--@  1 Rupesh  staff    798 Jun  7 03:12 Vagrantfile
+drwxr-xr-x@  6 Rupesh  staff    204 Jun  7 23:38 mooc-setup-master
+-rw-r-----@  1 Rupesh  staff  23618 Jun  7 23:37 mooc-setup-master.zip
+Rupeshs-MacBook-Air:myvagrant Rupesh$ 
+
+
+Rupeshs-MacBook-Air:myvagrant Rupesh$ vagrant up
+
+-- Check the VirtualBox, one sparkvm will start running
+-- After its running check,  http://localhost:8001/
+
+Rupeshs-MacBook-Air:myvagrant Rupesh$ vagrant halt
+==> sparkvm: Attempting graceful shutdown of VM...
+Rupeshs-MacBook-Air:myvagrant Rupesh$ 
+

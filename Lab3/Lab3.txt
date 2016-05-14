@@ -1,0 +1,42 @@
+
+
+
+
+Joins in Spark:
+
+1. SparkSQL
+
+Two RDD's can be joined using SQL joins like INNER JOIN,LEFT,RIGHT JOIN,FULL OUTER JOIN
+
+X.leftOuterJoin(Y)
+
+>>x = sc.parallelize([("a",1),("b",4)])
+>>y = sc.parallelize([("a",2)])
+
+>>sorted(x.leftOuterJoin(y).collect())
+
+Value: [('a',(1,2)),('b',(4,None))]
+
+-----------------------------------
+
+>> sorted(x.rightOuterJoin(y).collect())
+
+-----------------------------------
+
+FullOuterJoin
+
+>>x = sc.parallelize([("a",1),("b",4)])
+>>y = sc.parallelize([("a",2),("c",8)])
+>> sorted(x.fullOuterJoin(y).collect())
+
+Value: [('a',(1,2)),('b',(4,8)),('c',(None,8))]
+
+
+
+---------------------
+
+
+submission:
+
+Your submission token id is 836534-aeaaa007d3acd7e0430eaa19a6fa5ddd:9794f279458bf0951961b708bcb4c047:ip-172-31-36-186
+Please include this submission token id when you need support for your code submission.
